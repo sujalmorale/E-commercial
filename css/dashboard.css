@@ -1,0 +1,171 @@
+/* ==========================================================================
+   AMAZON CLONE - USER DASHBOARD, ORDERS & INVOICE
+   ========================================================================== */
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.dashboard-sidebar {
+  background: white;
+  border-radius: var(--radius-sm);
+  padding: 16px 0;
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+}
+
+.dashboard-menu-item {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.dashboard-menu-item:hover, .dashboard-menu-item.active {
+  background-color: #f7f9fa;
+  border-left-color: var(--amazon-orange);
+  color: var(--amazon-orange-hover);
+  font-weight: 700;
+}
+
+.dashboard-content {
+  background: white;
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Orders List & Status Cards */
+.order-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.order-card-header {
+  background-color: #f6f6f6;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 13px;
+}
+
+.order-meta-group {
+  display: flex;
+  gap: 24px;
+}
+
+.order-meta-label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.order-meta-val {
+  font-weight: 600;
+}
+
+.order-card-body {
+  padding: 20px;
+}
+
+/* Tracking Timeline */
+.order-tracking-timeline {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  position: relative;
+}
+
+.order-tracking-timeline::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  right: 30px;
+  height: 4px;
+  background: #e0e0e0;
+  z-index: 1;
+}
+
+.tracking-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+  font-size: 12px;
+}
+
+.node-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.tracking-node.completed .node-dot {
+  background: var(--amazon-green);
+}
+
+.tracking-node.active .node-dot {
+  background: var(--amazon-orange);
+}
+
+/* Invoice Modal & Printable Document */
+.invoice-container {
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius-md);
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #232f3e;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.invoice-table th, .invoice-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.invoice-table th {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
