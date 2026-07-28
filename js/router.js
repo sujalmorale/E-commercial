@@ -90,6 +90,7 @@ function renderCategoryPage(container, category) {
 
   const isHomeKitchen = (category === 'Home & Kitchen');
   const isBooks = (category === 'Books');
+  const isFashion = (category === 'Fashion');
 
   container.innerHTML = `
     <div class="container animate-fade-in" style="margin-top:16px;">
@@ -201,6 +202,46 @@ function renderCategoryPage(container, category) {
         </div>
       ` : ''}
 
+      <!-- Top Banner Header for Fashion -->
+      ${isFashion ? `
+        <div style="background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); border-radius: 8px; padding: 24px 32px; margin-bottom: 20px; border: 1px solid #fbcfe8;">
+          <h1 style="font-size: 24px; font-weight: 800; color: #9d174d; margin-bottom: 6px;">
+            Amazon Fashion – Trending Shirts, Ethnic Kurta Sets, Jeans & Activewear
+          </h1>
+          <p style="font-size: 13px; color: #831843;">
+            Upgrade your wardrobe with top styles from AUSK, ANNI DESIGNER, The Pant Project, Symbol Premium, KLOSIA, Nike, and Levi's.
+          </p>
+        </div>
+
+        <!-- Quick Sub-category Icon Bar for Fashion -->
+        <div style="display: flex; gap: 16px; overflow-x: auto; padding-bottom: 16px; margin-bottom: 24px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('AUSK')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #fae8ff; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">👔</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Polos & Shirts</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('ANNI DESIGNER')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #fce7f3; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">👗</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Women's Ethnic</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('The Pant Project')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #e0e7ff; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">👖</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Formal & Jeans</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('TOPLOT')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #dcfce7; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">👚</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Co-ords & Tops</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('Lymio')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #fef3c7; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">🩳</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Cargo & Shorts</span>
+          </div>
+        </div>
+      ` : ''}
+
       <!-- Main Layout with Sidebar Filters & Product Grid -->
       <div style="display: grid; grid-template-columns: 220px 1fr; gap: 20px;">
         
@@ -208,45 +249,57 @@ function renderCategoryPage(container, category) {
         <aside style="background: white; border-radius: 4px; padding: 16px; box-shadow: var(--shadow-sm); height: fit-content; font-size: 13px;">
           <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 12px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Category</h4>
           <ul style="line-height: 1.8; color: #333; margin-bottom: 16px;">
-            <li><a href="#category/Books" style="font-weight:bold; color:var(--amazon-link);">${category}</a></li>
-            ${isBooks ? `
+            <li><a href="#category/Fashion" style="font-weight:bold; color:var(--amazon-link);">${category}</a></li>
+            ${isFashion ? `
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('AUSK')">Men's Shirts & Polos</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('ANNI DESIGNER')">Women's Ethnic & Kurtas</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('The Pant Project')">Formal Trousers & Pants</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Symbol Premium')">Denim Jeans & Jackets</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('TOPLOT')">Co-ord Sets & Tops</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Lymio')">Cargo Shorts & Casuals</a></li>
+            ` : (isBooks ? `
               <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Napoleon Hill')">Self-Help & Mindset</a></li>
               <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Robert Kiyosaki')">Business & Economics</a></li>
-              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Dale Carnegie')">Communication & Success</a></li>
-              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Classics Library')">Philosophy & Strategy</a></li>
-              <li style="margin-left:10px;"><a href="javascript:void(0)">Kindle eBooks</a></li>
             ` : `
-              <li style="margin-left:10px;"><a href="javascript:void(0)">Kitchen & Dining</a></li>
               <li style="margin-left:10px;"><a href="javascript:void(0)">Kitchen Appliances</a></li>
               <li style="margin-left:10px;"><a href="javascript:void(0)">Home Decor & Clocks</a></li>
-            `}
+            `)}
           </ul>
 
-          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Authors & Publishers</h4>
+          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Brands</h4>
           <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:16px;">
-            ${isBooks ? `
+            ${isFashion ? `
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'AUSK')" /> AUSK</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'ANNI DESIGNER')" /> ANNI DESIGNER</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'The Pant Project')" /> The Pant Project</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Symbol Premium')" /> Symbol Premium</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'KLOSIA')" /> KLOSIA</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Lymio')" /> Lymio</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'TOPLOT')" /> TOPLOT</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Ada')" /> Ada</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Leriya Fashion')" /> Leriya Fashion</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Nike')" /> Nike</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Levi\'s')" /> Levi's</label>
+            ` : (isBooks ? `
               <label><input type="checkbox" onchange="filterBrandCheck(this, 'Napoleon Hill')" /> Napoleon Hill</label>
               <label><input type="checkbox" onchange="filterBrandCheck(this, 'Dale Carnegie')" /> Dale Carnegie</label>
-              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Joseph Murphy')" /> Dr. Joseph Murphy</label>
-              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Robert Kiyosaki')" /> Robert Kiyosaki</label>
-              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Nick Trenton')" /> Nick Trenton</label>
-              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Thomas Sterner')" /> Thomas M. Sterner</label>
-              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Classics Library')" /> Classics Library</label>
             ` : `
               <label><input type="checkbox" onchange="filterBrandCheck(this, 'Prestige')" /> Prestige</label>
               <label><input type="checkbox" onchange="filterBrandCheck(this, 'Philips')" /> Philips</label>
-              <label><input type="checkbox" onchange="filterBrandCheck(this, 'MILTON')" /> MILTON</label>
-              <label><input type="checkbox" onchange="filterBrandCheck(this, 'De\'Longhi')" /> De'Longhi</label>
-            `}
+            `)}
           </div>
 
-          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Format</h4>
-          <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:16px;">
-            <label><input type="checkbox" checked /> Paperback</label>
-            <label><input type="checkbox" /> Hardcover</label>
-            <label><input type="checkbox" /> Kindle Edition</label>
-            <label><input type="checkbox" /> Boxset / Collection</label>
-          </div>
+          ${isFashion ? `
+            <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Size</h4>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-bottom:16px; font-size:11px; text-align:center;">
+              <span style="border:1px solid #ccc; padding:4px; border-radius:4px; cursor:pointer;">S</span>
+              <span style="border:1px solid #ccc; padding:4px; border-radius:4px; cursor:pointer;">M</span>
+              <span style="border:1px solid #ccc; padding:4px; border-radius:4px; cursor:pointer;">L</span>
+              <span style="border:1px solid #ccc; padding:4px; border-radius:4px; cursor:pointer;">XL</span>
+              <span style="border:1px solid #ccc; padding:4px; border-radius:4px; cursor:pointer;">2XL</span>
+              <span style="border:1px solid #ccc; padding:4px; border-radius:4px; cursor:pointer;">Free</span>
+            </div>
+          ` : ''}
 
           <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Customer Reviews</h4>
           <div style="color: #ffa41c; cursor: pointer; margin-bottom: 16px;" onclick="filterCategoryRating(4)">
@@ -255,10 +308,10 @@ function renderCategoryPage(container, category) {
 
           <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Price Range</h4>
           <div style="display:flex; flex-direction:column; gap:4px; color:var(--amazon-link); cursor:pointer;">
-            <span onclick="filterPriceRange(0, 5)">Under $5</span>
-            <span onclick="filterPriceRange(5, 10)">$5 to $10</span>
-            <span onclick="filterPriceRange(10, 25)">$10 to $25</span>
-            <span onclick="filterPriceRange(25, 100)">$25 & Above</span>
+            <span onclick="filterPriceRange(0, 20)">Under $20</span>
+            <span onclick="filterPriceRange(20, 40)">$20 to $40</span>
+            <span onclick="filterPriceRange(40, 80)">$40 to $80</span>
+            <span onclick="filterPriceRange(80, 500)">$80 & Above</span>
           </div>
         </aside>
 

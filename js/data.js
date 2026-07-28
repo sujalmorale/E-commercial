@@ -708,8 +708,309 @@ const INITIAL_PRODUCTS = [
     reviews: [
       { id: "bk10", author: "Dr. Rachel", rating: 5, date: "2026-07-18", comment: "Practical exercises that really calm an overactive mind." }
     ]
+  },
+  {
+    id: "prod-401",
+    title: "AUSK Men's Retro Cable-Knit Quarter-Zip Polo - Premium Vintage Style",
+    brand: "AUSK",
+    category: "Fashion",
+    price: 14.99,
+    originalPrice: 24.99,
+    rating: 4.4,
+    reviewsCount: 1534,
+    stock: 45,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 80,
+    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80",
+    description: "Vintage inspired retro quarter-zip cable knit polo t-shirt for men. Soft breathable cotton blend fabric with contrast collar detailing.",
+    specs: [
+      "Material: 100% Breathable Cotton Blend",
+      "Style: Retro Quarter-Zip Polo Collar",
+      "Fit: Regular Fit | Machine Washable"
+    ],
+    reviews: [
+      { id: "f1", author: "Rohan V.", rating: 5, date: "2026-07-14", comment: "Great retro look and very comfortable fabric!" }
+    ]
+  },
+  {
+    id: "prod-402",
+    title: "ANNI DESIGNER Women's Rayon Blend Solid Straight Kurta with Dupatta Set",
+    brand: "ANNI DESIGNER",
+    category: "Fashion",
+    price: 19.99,
+    originalPrice: 34.99,
+    rating: 4.5,
+    reviewsCount: 6700,
+    stock: 60,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 70,
+    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    description: "Elegant women's solid straight rayon kurta with matching pant and graceful organza dupatta. Ideal for festive occasions and daily wear.",
+    specs: [
+      "Fabric: Premium Rayon Blend",
+      "Sleeve: 3/4th Sleeves | Neck: Round Neck",
+      "Package Contains: 1 Kurta, 1 Pant, 1 Dupatta"
+    ],
+    reviews: [
+      { id: "f2", author: "Pooja Sharma", rating: 5, date: "2026-06-20", comment: "Stitching and color are top notch. Fits perfectly!" }
+    ]
+  },
+  {
+    id: "prod-403",
+    title: "The Pant Project Luxury PV Lycra Stretchable Formal Checks Pants for Men",
+    brand: "The Pant Project",
+    category: "Fashion",
+    price: 49.99,
+    originalPrice: 69.99,
+    rating: 4.7,
+    reviewsCount: 2100,
+    stock: 25,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 88,
+    image: "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=800&q=80",
+    description: "Custom-stretch premium formal trousers engineered with 4-way stretch fabric for ultimate comfort during long workdays.",
+    specs: [
+      "Material: PV Lycra 4-Way Stretch",
+      "Design: Micro Checks Pattern | Flat Front",
+      "Moisture-wicking & wrinkle-resistant finish"
+    ],
+    reviews: [
+      { id: "f3", author: "Abhishek M.", rating: 5, date: "2026-07-05", comment: "Best formal trousers I've owned. Super flexible!" }
+    ]
+  },
+  {
+    id: "prod-404",
+    title: "Symbol Premium Men's Casual Cotton Denim Shirt - Regular Fit",
+    brand: "Symbol Premium",
+    category: "Fashion",
+    price: 29.99,
+    originalPrice: 44.99,
+    rating: 4.6,
+    reviewsCount: 359,
+    stock: 35,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: false,
+    claimedPercent: 45,
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+    description: "Classic black denim button-down casual shirt crafted from 100% heavy cotton wash. Features dual flap chest pockets.",
+    specs: [
+      "100% Breathable Washed Cotton Denim",
+      "Regular Fit with Curved Hemline",
+      "Double Chest Pockets with Snap Buttons"
+    ],
+    reviews: [
+      { id: "f4", author: "Karan Johar", rating: 5, date: "2026-06-11", comment: "Rugged quality denim shirt. Fits great over a white tee." }
+    ]
+  },
+  {
+    id: "prod-405",
+    title: "KLOSIA Women's Rayon Printed Anarkali Kurta and Pant Set with Dupatta",
+    brand: "KLOSIA",
+    category: "Fashion",
+    price: 22.99,
+    originalPrice: 39.99,
+    rating: 4.6,
+    reviewsCount: 8800,
+    stock: 50,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 92,
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    description: "Beautiful floral printed flared Anarkali kurta set with comfortable pants and lightweight matching cotton dupatta.",
+    specs: [
+      "Fabric: 100% Soft Rayon",
+      "Style: Flared Anarkali Kurta with Gotta Patti Lace",
+      "Occasion: Festive, Ethnic & Wedding Celebrations"
+    ],
+    reviews: [
+      { id: "f5", author: "Divya N.", rating: 5, date: "2026-07-18", comment: "Flowy and comfortable fabric. Got so many compliments!" }
+    ]
+  },
+  {
+    id: "prod-406",
+    title: "Lymio Men's Cotton Cargo Shorts with Pocket Style - Casual Summer Wear",
+    brand: "Lymio",
+    category: "Fashion",
+    price: 15.99,
+    originalPrice: 24.99,
+    rating: 4.4,
+    reviewsCount: 1200,
+    stock: 70,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 55,
+    image: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=800&q=80",
+    description: "Durable multi-pocket cotton cargo shorts for men. Elastic waistband with drawstrings for outdoor adventures and weekend chilling.",
+    specs: [
+      "100% Durable Heavy Duty Cotton Canvas",
+      "6 Utility Pockets with Velcro Closures",
+      "Breathable Relaxed Fit"
+    ],
+    reviews: [
+      { id: "f6", author: "Samir K.", rating: 4, date: "2026-06-25", comment: "Pockets are super useful for carrying keys, wallet, and phone." }
+    ]
+  },
+  {
+    id: "prod-407",
+    title: "Symbol Premium Men's Slim Fit Stretchable Denim Jeans - Midnight Black",
+    brand: "Symbol Premium",
+    category: "Fashion",
+    price: 34.99,
+    originalPrice: 49.99,
+    rating: 4.5,
+    reviewsCount: 607,
+    stock: 40,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 82,
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+    description: "Modern slim-fit black stretch jeans woven with elastane for maximum mobility and shape retention.",
+    specs: [
+      "98% Cotton, 2% Elastane Stretch Denim",
+      "Slim Fit with Tapered Leg",
+      "Classic 5-Pocket Styling with Durable Zipper Fly"
+    ],
+    reviews: [
+      { id: "f7", author: "Varun D.", rating: 5, date: "2026-07-02", comment: "Perfect stretch and sleek black wash." }
+    ]
+  },
+  {
+    id: "prod-408",
+    title: "TOPLOT Women's Co-ord Set Stylish Matching Top & Bottom Lounge Set",
+    brand: "TOPLOT",
+    category: "Fashion",
+    price: 17.99,
+    originalPrice: 29.99,
+    rating: 4.4,
+    reviewsCount: 501,
+    stock: 55,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: false,
+    claimedPercent: 30,
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+    description: "Trending 2-piece co-ord set for women. Features relaxed V-neck tunic top with wide-leg trousers in solid navy.",
+    specs: [
+      "Fabric: Breathable Crepe Viscose",
+      "Set Includes: 1 Top, 1 Pair of Trousers",
+      "Elasticated Waistband for All-day Ease"
+    ],
+    reviews: [
+      { id: "f8", author: "Sneha R.", rating: 5, date: "2026-06-15", comment: "So chic and effortless for airport looks and brunch!" }
+    ]
+  },
+  {
+    id: "prod-409",
+    title: "Ada Hand Embroidered Lucknowi Chikankari Georgette Tunic Kurti Top",
+    brand: "Ada",
+    category: "Fashion",
+    price: 45.99,
+    originalPrice: 65.99,
+    rating: 4.8,
+    reviewsCount: 181,
+    stock: 20,
+    isFlashSale: false,
+    isTodayDeal: false,
+    isBestSeller: true,
+    claimedPercent: 65,
+    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    description: "Authentic GI-mapped hand embroidered Lucknowi Chikankari tunic top in delicate pastel pink georgette fabric.",
+    specs: [
+      "100% Handcrafted Lucknowi Chikankari Embroidery",
+      "Fabric: Faux Georgette (Includes Inner Camisole)",
+      "Style: Straight Hemline Tunic"
+    ],
+    reviews: [
+      { id: "f9", author: "Anjali Gupta", rating: 5, date: "2026-07-09", comment: "Exquisite handiwork. Truly royal feeling fabric!" }
+    ]
+  },
+  {
+    id: "prod-410",
+    title: "Leriya Fashion Men's Formal Button Down Shirt - Slim Fit Dress Shirt",
+    brand: "Leriya Fashion",
+    category: "Fashion",
+    price: 14.99,
+    originalPrice: 22.99,
+    rating: 4.5,
+    reviewsCount: 3000,
+    stock: 85,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 78,
+    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+    description: "Versatile men's formal dress shirt designed with crisp spread collar and wrinkle-resistant poly-cotton blend.",
+    specs: [
+      "Material: Cotton Poly Blend",
+      "Sleeve: Long Sleeves with Adjustable Cuffs",
+      "Easy Iron & Machine Washable"
+    ],
+    reviews: [
+      { id: "f10", author: "David K.", rating: 4, date: "2026-07-21", comment: "Great fit for office presentations and formal events." }
+    ]
+  },
+  {
+    id: "prod-411",
+    title: "KOTTY Men's Regular Fit Stylish Light Wash Denim Jeans",
+    brand: "KOTTY",
+    category: "Fashion",
+    price: 16.99,
+    originalPrice: 26.99,
+    rating: 4.3,
+    reviewsCount: 2400,
+    stock: 65,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: false,
+    claimedPercent: 40,
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+    description: "Classic light blue wash straight-fit jeans for everyday casual wear. Durable denim construction.",
+    specs: [
+      "100% Rigid Denim Cotton",
+      "Regular Fit Straight Leg",
+      "Heavy Duty Metal Rivets & Zipper"
+    ],
+    reviews: [
+      { id: "f11", author: "Alex T.", rating: 4, date: "2026-06-29", comment: "Good quality casual jeans for everyday wear." }
+    ]
+  },
+  {
+    id: "prod-412",
+    title: "BlissClub Women's Work Utility T-Shirt - Olive Green Active Top",
+    brand: "BlissClub",
+    category: "Fashion",
+    price: 24.99,
+    originalPrice: 34.99,
+    rating: 4.6,
+    reviewsCount: 26,
+    stock: 40,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: false,
+    claimedPercent: 50,
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    description: "Ultra-soft 4-way stretch utility t-shirt designed for active workdays, gym sessions, and outdoor travel.",
+    specs: [
+      "Fabric: CloudSoft Polyester Spandex Blend",
+      "Sweat-wicking & Anti-odor Technology",
+      "Side Pocket Detail for Small Essentials"
+    ],
+    reviews: [
+      { id: "f12", author: "Tanya M.", rating: 5, date: "2026-07-11", comment: "So soft against skin and completely sweat-wicking!" }
+    ]
   }
 ];
+
 
 
 
