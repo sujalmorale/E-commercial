@@ -21,8 +21,8 @@ class AppStore {
 
     // Active session
     this.currentUser = this.loadStorage('amazon_current_user', INITIAL_USERS[1]); // Default logged-in demo user
-    if (this.currentUser && (this.currentUser.name === "Sujal Morale" || this.currentUser.name === "Sujal")) {
-      this.currentUser.name = "Srujal";
+    if (this.currentUser && (this.currentUser.name === "Srujal" || this.currentUser.name === "Sujal Morale" || this.currentUser.name === "Sujal")) {
+      this.currentUser.name = "Customer";
       this.saveStorage('amazon_current_user', this.currentUser);
     }
     this.cart = this.loadStorage('amazon_cart', []);

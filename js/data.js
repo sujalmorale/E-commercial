@@ -481,8 +481,8 @@ const INITIAL_USERS = [
   },
   {
     id: "usr-demo",
-    name: "Srujal",
-    email: "sujal@example.com",
+    name: "Customer",
+    email: "customer@example.com",
     password: "password123",
     role: "customer",
     addresses: [
@@ -505,7 +505,7 @@ const INITIAL_ORDERS = [
     tax: 27.84,
     discount: 0,
     grandTotal: 375.84,
-    shippingAddress: { name: "Srujal", street: "123 Innovation Drive", city: "San Jose", state: "CA", zip: "95110" },
+    shippingAddress: { name: "Customer", street: "123 Innovation Drive", city: "San Jose", state: "CA", zip: "95110" },
     paymentMethod: "Credit Card ending in 4242",
     trackingTimeline: [
       { status: "Ordered", date: "July 20, 10:30 AM", done: true },

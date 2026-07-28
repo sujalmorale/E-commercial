@@ -5,7 +5,7 @@
 let currentCheckoutStep = 1;
 let selectedPaymentType = "card";
 let checkoutShippingData = {
-  name: "Srujal",
+  name: "Customer",
   street: "123 Innovation Drive",
   city: "San Jose",
   state: "CA",
