@@ -88,17 +88,195 @@ function renderCategoryPage(container, category) {
     filtered = filtered.filter(p => p.category === category);
   }
 
+  const isHomeKitchen = (category === 'Home & Kitchen');
+
   container.innerHTML = `
-    <div class="container animate-fade-in" style="margin-top:20px;">
-      <div class="section-heading">
-        <h2>${category} Department (${filtered.length} products)</h2>
-      </div>
-      <div class="product-grid">
-        ${filtered.map(p => renderProductCard(p)).join('')}
+    <div class="container animate-fade-in" style="margin-top:16px;">
+      
+      <!-- Top Banner Header for Home & Kitchen -->
+      ${isHomeKitchen ? `
+        <div style="background: linear-gradient(135deg, #fff7eb 0%, #fff0db 100%); border-radius: 8px; padding: 24px 32px; margin-bottom: 20px; border: 1px solid #fed7aa;">
+          <h1 style="font-size: 24px; font-weight: 800; color: #9a3412; margin-bottom: 6px;">
+            Buy products across Home, Kitchen, Furniture & Appliances online at Amazon
+          </h1>
+          <p style="font-size: 13px; color: #7c2d12;">
+            Browse through wide range of Home & Kitchen products such as cookers, air fryers, colanders, clocks, lighting, bottles, and storage essentials.
+          </p>
+        </div>
+
+        <!-- Quick Sub-category Icon Bar -->
+        <div style="display: flex; gap: 16px; overflow-x: auto; padding-bottom: 16px; margin-bottom: 24px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 100px; cursor: pointer;" onclick="filterCategoryBrand('')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #e0f2fe; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">🍳</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Kitchenware</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 100px; cursor: pointer;" onclick="filterCategoryBrand('Prestige')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #ffedd5; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">⚡</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Appliances</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 100px; cursor: pointer;" onclick="filterCategoryBrand('Titan')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #fef08a; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">🕒</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Decor & Clocks</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 100px; cursor: pointer;" onclick="filterCategoryBrand('Orient')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #dcfce7; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">💡</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Lighting</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 100px; cursor: pointer;" onclick="filterCategoryBrand('MILTON')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #f3e8ff; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">🚰</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Thermosteel</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 100px; cursor: pointer;" onclick="filterCategoryBrand('Scotch-Brite')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #ffe4e6; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">🧼</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Cleaning</span>
+          </div>
+        </div>
+
+        <!-- Room by Room Grid Section -->
+        <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Shop by Room & Category</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div style="position: relative; border-radius: 8px; overflow: hidden; height: 140px; background: url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=80') center/cover; display: flex; align-items: flex-end; padding: 12px; cursor: pointer;" onclick="filterCategoryBrand('')">
+              <span style="background: rgba(255,255,255,0.92); padding: 4px 12px; border-radius: 12px; font-weight: 700; font-size: 12px;">Kitchen ➔</span>
+            </div>
+
+            <div style="position: relative; border-radius: 8px; overflow: hidden; height: 140px; background: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=500&q=80') center/cover; display: flex; align-items: flex-end; padding: 12px; cursor: pointer;" onclick="filterCategoryBrand('')">
+              <span style="background: rgba(255,255,255,0.92); padding: 4px 12px; border-radius: 12px; font-weight: 700; font-size: 12px;">Living Room ➔</span>
+            </div>
+
+            <div style="position: relative; border-radius: 8px; overflow: hidden; height: 140px; background: url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=500&q=80') center/cover; display: flex; align-items: flex-end; padding: 12px; cursor: pointer;" onclick="filterCategoryBrand('')">
+              <span style="background: rgba(255,255,255,0.92); padding: 4px 12px; border-radius: 12px; font-weight: 700; font-size: 12px;">Bedroom ➔</span>
+            </div>
+
+            <div style="position: relative; border-radius: 8px; overflow: hidden; height: 140px; background: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=500&q=80') center/cover; display: flex; align-items: flex-end; padding: 12px; cursor: pointer;" onclick="filterCategoryBrand('')">
+              <span style="background: rgba(255,255,255,0.92); padding: 4px 12px; border-radius: 12px; font-weight: 700; font-size: 12px;">Dining Room ➔</span>
+            </div>
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Main Layout with Sidebar Filters & Product Grid -->
+      <div style="display: grid; grid-template-columns: 220px 1fr; gap: 20px;">
+        
+        <!-- Left Sidebar Filters -->
+        <aside style="background: white; border-radius: 4px; padding: 16px; box-shadow: var(--shadow-sm); height: fit-content; font-size: 13px;">
+          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 12px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Category</h4>
+          <ul style="line-height: 1.8; color: #333; margin-bottom: 16px;">
+            <li><a href="#category/Home & Kitchen" style="font-weight:bold; color:var(--amazon-link);">Home & Kitchen</a></li>
+            <li style="margin-left:10px;"><a href="javascript:void(0)">Kitchen & Dining</a></li>
+            <li style="margin-left:10px;"><a href="javascript:void(0)">Kitchen Appliances</a></li>
+            <li style="margin-left:10px;"><a href="javascript:void(0)">Home Decor & Clocks</a></li>
+            <li style="margin-left:10px;"><a href="javascript:void(0)">Home Storage & Hooks</a></li>
+            <li style="margin-left:10px;"><a href="javascript:void(0)">Indoor Lighting</a></li>
+          </ul>
+
+          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Brands</h4>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:16px;">
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Prestige')" /> Prestige</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Philips')" /> Philips</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'MILTON')" /> MILTON</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'De\'Longhi')" /> De'Longhi</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Orient')" /> Orient</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Titan')" /> Titan</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Instant Pot')" /> Instant Pot</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Scotch-Brite')" /> Scotch-Brite</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Zulaxy')" /> Zulaxy</label>
+            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Clazkit')" /> Clazkit</label>
+          </div>
+
+          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Customer Reviews</h4>
+          <div style="color: #ffa41c; cursor: pointer; margin-bottom: 16px;" onclick="filterCategoryRating(4)">
+            ★★★★☆ & Up <span style="color:#565959;">(4.0+)</span>
+          </div>
+
+          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Price Range</h4>
+          <div style="display:flex; flex-direction:column; gap:4px; color:var(--amazon-link); cursor:pointer;">
+            <span onclick="filterPriceRange(0, 15)">Under $15</span>
+            <span onclick="filterPriceRange(15, 50)">$15 to $50</span>
+            <span onclick="filterPriceRange(50, 150)">$50 to $150</span>
+            <span onclick="filterPriceRange(150, 1000)">$150 & Above</span>
+          </div>
+        </aside>
+
+        <!-- Right Products Section -->
+        <div>
+          <div class="section-heading" style="background:white; padding:12px 16px; border-radius:4px; box-shadow:var(--shadow-sm);">
+            <h2 style="font-size:18px;">${category} Department <span style="font-size:13px; font-weight:normal; color:#565959;">(${filtered.length} items)</span></h2>
+            <select id="sort-category-select" class="qty-select" onchange="sortCategoryProducts(this.value, '${category}')">
+              <option value="featured">Sort by: Featured</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+              <option value="rating">Avg. Customer Review</option>
+            </select>
+          </div>
+
+          <div class="product-grid" id="cat-product-grid" style="margin-top:16px;">
+            ${filtered.map(p => renderProductCard(p)).join('')}
+          </div>
+        </div>
       </div>
     </div>
   `;
 }
+
+function filterCategoryBrand(brandName) {
+  const container = document.getElementById('app-main');
+  let filtered = window.store.products.filter(p => p.category === 'Home & Kitchen');
+  if (brandName) {
+    filtered = filtered.filter(p => p.brand.toLowerCase() === brandName.toLowerCase());
+  }
+  const grid = document.getElementById('cat-product-grid');
+  if (grid) {
+    grid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
+  }
+}
+
+function filterBrandCheck(checkbox, brandName) {
+  filterCategoryBrand(checkbox.checked ? brandName : '');
+}
+
+function filterCategoryRating(minRating) {
+  const grid = document.getElementById('cat-product-grid');
+  if (grid) {
+    const filtered = window.store.products.filter(p => p.category === 'Home & Kitchen' && p.rating >= minRating);
+    grid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
+  }
+}
+
+function filterPriceRange(min, max) {
+  const grid = document.getElementById('cat-product-grid');
+  if (grid) {
+    const filtered = window.store.products.filter(p => p.category === 'Home & Kitchen' && p.price >= min && p.price <= max);
+    grid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
+  }
+}
+
+function sortCategoryProducts(sortType, category) {
+  let filtered = window.store.products.filter(p => category === 'All' || p.category === category);
+  if (sortType === 'low-high') {
+    filtered.sort((a, b) => a.price - b.price);
+  } else if (sortType === 'high-low') {
+    filtered.sort((a, b) => b.price - a.price);
+  } else if (sortType === 'rating') {
+    filtered.sort((a, b) => b.rating - a.rating);
+  }
+  const grid = document.getElementById('cat-product-grid');
+  if (grid) {
+    grid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
+  }
+}
+
+window.filterCategoryBrand = filterCategoryBrand;
+window.filterBrandCheck = filterBrandCheck;
+window.filterCategoryRating = filterCategoryRating;
+window.filterPriceRange = filterPriceRange;
+window.sortCategoryProducts = sortCategoryProducts;
+
 
 function renderSearchResultsPage(container, query) {
   const q = query.toLowerCase();

@@ -11,6 +11,10 @@ class AppStore {
   initStore() {
     // Load from LocalStorage or initialize with defaults
     this.products = this.loadStorage('amazon_products', INITIAL_PRODUCTS);
+    if (this.products.length < INITIAL_PRODUCTS.length) {
+      this.products = INITIAL_PRODUCTS;
+      this.saveStorage('amazon_products', this.products);
+    }
     this.users = this.loadStorage('amazon_users', INITIAL_USERS);
     this.orders = this.loadStorage('amazon_orders', INITIAL_ORDERS);
     this.coupons = INITIAL_COUPONS;

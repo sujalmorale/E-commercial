@@ -257,8 +257,210 @@ const INITIAL_PRODUCTS = [
     reviews: [
       { id: "r11", author: "Tom C.", rating: 4, date: "2026-06-30", comment: "Accurate GPS tracking during long distance outdoor runs." }
     ]
+  },
+  {
+    id: "prod-201",
+    title: "Prestige Iris Plus 1600 Watts Induction Cooktop with Push Button Control",
+    brand: "Prestige",
+    category: "Home & Kitchen",
+    price: 42.99,
+    originalPrice: 59.99,
+    rating: 4.4,
+    reviewsCount: 2396,
+    stock: 22,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 70,
+    image: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80",
+    description: "High efficiency 1600W induction cooktop with Indian menu preset options, automatic voltage regulator, and durable micro-crystal glass plate.",
+    specs: [
+      "1600 Watt Power with fast heating technology",
+      "Soft Touch Push Button controls with LED display",
+      "Automatic shut-off & pause function for enhanced safety",
+      "1-Year Manufacturer Warranty"
+    ],
+    reviews: [
+      { id: "hk1", author: "Anish Sharma", rating: 5, date: "2026-07-12", comment: "Boils water in under 2 minutes. Easy to clean and saves gas!" }
+    ]
+  },
+  {
+    id: "prod-202",
+    title: "Titan Essence Classic Silent Movement Wall Clock (12-inch, Black)",
+    brand: "Titan",
+    category: "Home & Kitchen",
+    price: 24.99,
+    originalPrice: 34.99,
+    rating: 4.5,
+    reviewsCount: 625,
+    stock: 45,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 40,
+    image: "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=800&q=80",
+    description: "Elegant 12-inch wall clock with non-ticking silent sweep quartz movement. Perfect for living room, bedroom, and office decor.",
+    specs: [
+      "Silent quartz sweep movement (no ticking sound)",
+      "High quality durable ABS casing with clear glass cover",
+      "Requires 1 AA battery (included)"
+    ],
+    reviews: [
+      { id: "hk2", author: "Priya V.", rating: 5, date: "2026-06-18", comment: "Looks sleek and modern on my living room wall. Completely silent!" }
+    ]
+  },
+  {
+    id: "prod-203",
+    title: "Clazkit Food Strainer Colander Bowl Set for Washing Fruits & Vegetables",
+    brand: "Clazkit",
+    category: "Home & Kitchen",
+    price: 9.99,
+    originalPrice: 14.99,
+    rating: 4.3,
+    reviewsCount: 8097,
+    stock: 80,
+    isFlashSale: false,
+    isTodayDeal: false,
+    isBestSeller: true,
+    claimedPercent: 55,
+    image: "https://images.unsplash.com/photo-1590794056226-77ef3a6c4743?auto=format&fit=crop&w=800&q=80",
+    description: "Multi-functional 2-in-1 kitchen colander strainer bowl. Ideal for washing pasta, rice, fruits, and draining water efficiently.",
+    specs: [
+      "BPA-free food grade durable plastic",
+      "Dual layer 360-degree rotation design",
+      "Ergonomic handle for firm grip"
+    ],
+    reviews: [
+      { id: "hk3", author: "Meera K.", rating: 4, date: "2026-05-29", comment: "Super convenient for rinsing vegetables and berries!" }
+    ]
+  },
+  {
+    id: "prod-204",
+    title: "Orient Electric 12W Inverter Rechargeable Emergency LED Bulb",
+    brand: "Orient",
+    category: "Home & Kitchen",
+    price: 14.99,
+    originalPrice: 19.99,
+    rating: 4.4,
+    reviewsCount: 8228,
+    stock: 60,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 85,
+    image: "https://images.unsplash.com/photo-1550985616-10810253b84d?auto=format&fit=crop&w=800&q=80",
+    description: "Rechargeable LED emergency bulb with built-in lithium-ion battery. Provides up to 4 hours of continuous backup light during power outages.",
+    specs: [
+      "12W Bright Cool Daylight (6500K)",
+      "Built-in 2200mAh rechargeable Li-ion battery",
+      "Automatic switching to emergency mode during power failure"
+    ],
+    reviews: [
+      { id: "hk4", author: "Rajesh P.", rating: 5, date: "2026-07-08", comment: "Lifesaver during power cuts. Brightness is identical to regular LED!" }
+    ]
+  },
+  {
+    id: "prod-205",
+    title: "Scotch-Brite Heavy Duty Scrub Pad (Pack of 5 Pads)",
+    brand: "Scotch-Brite",
+    category: "Home & Kitchen",
+    price: 6.99,
+    originalPrice: 9.99,
+    rating: 4.6,
+    reviewsCount: 10565,
+    stock: 150,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 30,
+    image: "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&w=800&q=80",
+    description: "Heavy duty scouring pads with ALO (Aluminum Oxide) technology to cut through tough burnt food and grease without scratching cookware.",
+    specs: [
+      "Stain removal power for stainless steel & iron cookware",
+      "Longer lasting non-wearing fiber texture",
+      "Pack of 5 individual scrub pads"
+    ],
+    reviews: [
+      { id: "hk5", author: "Sunita G.", rating: 5, date: "2026-06-25", comment: "The gold standard for cleaning pots and pans." }
+    ]
+  },
+  {
+    id: "prod-206",
+    title: "Zulaxy Heavy Duty Wall Hooks for Photo Frames & Kitchen Storage (Pack of 10)",
+    brand: "Zulaxy",
+    category: "Home & Kitchen",
+    price: 8.99,
+    originalPrice: 12.99,
+    rating: 4.2,
+    reviewsCount: 10481,
+    stock: 90,
+    isFlashSale: false,
+    isTodayDeal: false,
+    isBestSeller: false,
+    claimedPercent: 20,
+    image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80",
+    description: "Transparent self-adhesive heavy-duty wall hooks. Supports up to 10kg load for wall frames, kitchen utensils, and bath accessories.",
+    specs: [
+      "No drilling required – strong waterproof adhesive back",
+      "Rustproof stainless steel hook structure",
+      "Suitable for tile, glass, wood, and smooth walls"
+    ],
+    reviews: [
+      { id: "hk6", author: "Karan M.", rating: 4, date: "2026-07-01", comment: "Holds heavy pans in the kitchen without falling off!" }
+    ]
+  },
+  {
+    id: "prod-207",
+    title: "MILTON Thermosteel Stainless Steel Vacuum Insulated Bottle 1000ml",
+    brand: "MILTON",
+    category: "Home & Kitchen",
+    price: 19.99,
+    originalPrice: 24.99,
+    rating: 4.7,
+    reviewsCount: 3420,
+    stock: 55,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 76,
+    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80",
+    description: "Double wall vacuum insulated thermosteel flask. Keeps beverages hot for 24 hours or cold for 24 hours.",
+    specs: [
+      "100% Rust-free 304 grade stainless steel inside and outside",
+      "Leakproof copper-coated temperature retention liner",
+      "1000ml capacity with insulated drinking cup cap"
+    ],
+    reviews: [
+      { id: "hk7", author: "Vikram R.", rating: 5, date: "2026-07-14", comment: "Coffee stays piping hot all day at work!" }
+    ]
+  },
+  {
+    id: "prod-208",
+    title: "Philips HD9200/90 Essential Air Fryer with Rapid Air Technology (4.1 Liter)",
+    brand: "Philips",
+    category: "Home & Kitchen",
+    price: 99.99,
+    originalPrice: 129.99,
+    rating: 4.8,
+    reviewsCount: 1840,
+    stock: 18,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 92,
+    image: "https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=800&q=80",
+    description: "Fry with up to 90% less fat. Rapid Air technology with starfish design swirls hot air to create delicious foods crisp on the outside and tender inside.",
+    specs: [
+      "Adjustable time and temperature control up to 200°C",
+      "1400W power with quick clean removable dishwasher-safe basket",
+      "Includes free NutriU app access with hundreds of air fryer recipes"
+    ],
+    reviews: [
+      { id: "hk8", author: "Neha Gupta", rating: 5, date: "2026-07-20", comment: "Crispy fries and chicken without soaking in oil. Essential kitchen gear!" }
+    ]
   }
 ];
+
 
 const INITIAL_COUPONS = [
   { code: "AMAZON20", discountPercent: 20, description: "20% Off Storewide" },
