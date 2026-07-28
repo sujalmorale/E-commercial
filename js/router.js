@@ -89,6 +89,7 @@ function renderCategoryPage(container, category) {
   }
 
   const isHomeKitchen = (category === 'Home & Kitchen');
+  const isBooks = (category === 'Books');
 
   container.innerHTML = `
     <div class="container animate-fade-in" style="margin-top:16px;">
@@ -160,6 +161,46 @@ function renderCategoryPage(container, category) {
         </div>
       ` : ''}
 
+      <!-- Top Banner Header for Books -->
+      ${isBooks ? `
+        <div style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-radius: 8px; padding: 24px 32px; margin-bottom: 20px; border: 1px solid #bfdbfe;">
+          <h1 style="font-size: 24px; font-weight: 800; color: #1e40af; margin-bottom: 6px;">
+            The Amazon Bookstore – Best Sellers, Self-Help, Business & Philosophy
+          </h1>
+          <p style="font-size: 13px; color: #1e3a8a;">
+            Explore millions of books including Think and Grow Rich, How to Win Friends, Rich Dad Poor Dad, Atomic Habits, and classic boxsets.
+          </p>
+        </div>
+
+        <!-- Quick Sub-category Icon Bar for Books -->
+        <div style="display: flex; gap: 16px; overflow-x: auto; padding-bottom: 16px; margin-bottom: 24px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('Napoleon Hill')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #fef3c7; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">📚</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Self-Help</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('Robert Kiyosaki')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #dcfce7; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">💡</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Business & Wealth</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('Dale Carnegie')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #e0f2fe; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">🤝</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Communication</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('Classics Library')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #f3e8ff; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">🏛️</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Philosophy</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 110px; cursor: pointer;" onclick="filterCategoryBrand('Boxset Classics')">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: #ffe4e6; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">🎁</div>
+            <span style="font-size: 12px; font-weight: 600; text-align: center;">Boxsets</span>
+          </div>
+        </div>
+      ` : ''}
+
       <!-- Main Layout with Sidebar Filters & Product Grid -->
       <div style="display: grid; grid-template-columns: 220px 1fr; gap: 20px;">
         
@@ -167,26 +208,44 @@ function renderCategoryPage(container, category) {
         <aside style="background: white; border-radius: 4px; padding: 16px; box-shadow: var(--shadow-sm); height: fit-content; font-size: 13px;">
           <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 12px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Category</h4>
           <ul style="line-height: 1.8; color: #333; margin-bottom: 16px;">
-            <li><a href="#category/Home & Kitchen" style="font-weight:bold; color:var(--amazon-link);">Home & Kitchen</a></li>
-            <li style="margin-left:10px;"><a href="javascript:void(0)">Kitchen & Dining</a></li>
-            <li style="margin-left:10px;"><a href="javascript:void(0)">Kitchen Appliances</a></li>
-            <li style="margin-left:10px;"><a href="javascript:void(0)">Home Decor & Clocks</a></li>
-            <li style="margin-left:10px;"><a href="javascript:void(0)">Home Storage & Hooks</a></li>
-            <li style="margin-left:10px;"><a href="javascript:void(0)">Indoor Lighting</a></li>
+            <li><a href="#category/Books" style="font-weight:bold; color:var(--amazon-link);">${category}</a></li>
+            ${isBooks ? `
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Napoleon Hill')">Self-Help & Mindset</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Robert Kiyosaki')">Business & Economics</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Dale Carnegie')">Communication & Success</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)" onclick="filterCategoryBrand('Classics Library')">Philosophy & Strategy</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)">Kindle eBooks</a></li>
+            ` : `
+              <li style="margin-left:10px;"><a href="javascript:void(0)">Kitchen & Dining</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)">Kitchen Appliances</a></li>
+              <li style="margin-left:10px;"><a href="javascript:void(0)">Home Decor & Clocks</a></li>
+            `}
           </ul>
 
-          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Brands</h4>
+          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Authors & Publishers</h4>
           <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:16px;">
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Prestige')" /> Prestige</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Philips')" /> Philips</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'MILTON')" /> MILTON</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'De\'Longhi')" /> De'Longhi</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Orient')" /> Orient</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Titan')" /> Titan</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Instant Pot')" /> Instant Pot</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Scotch-Brite')" /> Scotch-Brite</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Zulaxy')" /> Zulaxy</label>
-            <label><input type="checkbox" onchange="filterBrandCheck(this, 'Clazkit')" /> Clazkit</label>
+            ${isBooks ? `
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Napoleon Hill')" /> Napoleon Hill</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Dale Carnegie')" /> Dale Carnegie</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Joseph Murphy')" /> Dr. Joseph Murphy</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Robert Kiyosaki')" /> Robert Kiyosaki</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Nick Trenton')" /> Nick Trenton</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Thomas Sterner')" /> Thomas M. Sterner</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Classics Library')" /> Classics Library</label>
+            ` : `
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Prestige')" /> Prestige</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'Philips')" /> Philips</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'MILTON')" /> MILTON</label>
+              <label><input type="checkbox" onchange="filterBrandCheck(this, 'De\'Longhi')" /> De'Longhi</label>
+            `}
+          </div>
+
+          <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Format</h4>
+          <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:16px;">
+            <label><input type="checkbox" checked /> Paperback</label>
+            <label><input type="checkbox" /> Hardcover</label>
+            <label><input type="checkbox" /> Kindle Edition</label>
+            <label><input type="checkbox" /> Boxset / Collection</label>
           </div>
 
           <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Customer Reviews</h4>
@@ -196,10 +255,10 @@ function renderCategoryPage(container, category) {
 
           <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px;">Price Range</h4>
           <div style="display:flex; flex-direction:column; gap:4px; color:var(--amazon-link); cursor:pointer;">
-            <span onclick="filterPriceRange(0, 15)">Under $15</span>
-            <span onclick="filterPriceRange(15, 50)">$15 to $50</span>
-            <span onclick="filterPriceRange(50, 150)">$50 to $150</span>
-            <span onclick="filterPriceRange(150, 1000)">$150 & Above</span>
+            <span onclick="filterPriceRange(0, 5)">Under $5</span>
+            <span onclick="filterPriceRange(5, 10)">$5 to $10</span>
+            <span onclick="filterPriceRange(10, 25)">$10 to $25</span>
+            <span onclick="filterPriceRange(25, 100)">$25 & Above</span>
           </div>
         </aside>
 

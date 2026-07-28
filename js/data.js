@@ -458,8 +458,259 @@ const INITIAL_PRODUCTS = [
     reviews: [
       { id: "hk8", author: "Neha Gupta", rating: 5, date: "2026-07-20", comment: "Crispy fries and chicken without soaking in oil. Essential kitchen gear!" }
     ]
+  },
+  {
+    id: "prod-301",
+    title: "Think and Grow Rich by Napoleon Hill - Self-Help & Goal Achievement Classic",
+    brand: "Napoleon Hill",
+    category: "Books",
+    price: 2.99,
+    originalPrice: 4.99,
+    rating: 4.8,
+    reviewsCount: 5200,
+    stock: 100,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 88,
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+    description: "The classic guide to financial independence and personal accomplishment. Learn the 13 proven principles of success.",
+    specs: [
+      "Format: Paperback / Hardcover",
+      "Publisher: TarcherPerigee",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk1", author: "Michael R.", rating: 5, date: "2026-07-10", comment: "A timeless masterpiece on mindset and determination!" }
+    ]
+  },
+  {
+    id: "prod-302",
+    title: "How to Win Friends and Influence People by Dale Carnegie",
+    brand: "Dale Carnegie",
+    category: "Books",
+    price: 4.49,
+    originalPrice: 6.99,
+    rating: 4.8,
+    reviewsCount: 12400,
+    stock: 90,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 75,
+    image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80",
+    description: "The time-tested advice that has carried countless people up the ladder of success in business and personal lives.",
+    specs: [
+      "Format: Premium Paperback",
+      "Publisher: Simon & Schuster",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk2", author: "Sarah Jenkins", rating: 5, date: "2026-06-18", comment: "Should be required reading for everyone!" }
+    ]
+  },
+  {
+    id: "prod-303",
+    title: "The Power of Your Subconscious Mind by Dr. Joseph Murphy",
+    brand: "Joseph Murphy",
+    category: "Books",
+    price: 4.49,
+    originalPrice: 5.99,
+    rating: 4.7,
+    reviewsCount: 67100,
+    stock: 120,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 82,
+    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
+    description: "Unlock the extraordinary mental powers of your mind to overcome obstacles, achieve goals, and build wealth.",
+    specs: [
+      "Format: Classic Edition Paperback",
+      "Publisher: Wilder Publications",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk3", author: "Arun K.", rating: 5, date: "2026-07-02", comment: "Transformed my daily thinking and positivity." }
+    ]
+  },
+  {
+    id: "prod-304",
+    title: "Leadership and Management Strategy Collection (The Prince, The Art of War, Arthashastra)",
+    brand: "Various Authors",
+    category: "Books",
+    price: 5.99,
+    originalPrice: 9.99,
+    rating: 4.6,
+    reviewsCount: 364,
+    stock: 45,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: false,
+    claimedPercent: 60,
+    image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80",
+    description: "3-in-1 Boxset containing Sun Tzu's The Art of War, Machiavelli's The Prince, and Kautilya's Arthashastra.",
+    specs: [
+      "Format: 3-Book Collector's Set",
+      "Publisher: Fingerprint! Publishing",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk4", author: "David B.", rating: 5, date: "2026-06-28", comment: "Essential strategy guides for business leaders and managers!" }
+    ]
+  },
+  {
+    id: "prod-305",
+    title: "World's Greatest Books For Personal Growth & Wealth (Set of 4 Books)",
+    brand: "Boxset Classics",
+    category: "Books",
+    price: 4.99,
+    originalPrice: 8.99,
+    rating: 4.7,
+    reviewsCount: 28700,
+    stock: 65,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 90,
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80",
+    description: "Gift Boxset containing 4 legendary bestsellers: Think and Grow Rich, How to Win Friends, Richest Man in Babylon, and Power of Mind.",
+    specs: [
+      "Format: Paperback Gift Boxset",
+      "Includes 4 Complete Unabridged Books",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk5", author: "Anita P.", rating: 5, date: "2026-07-15", comment: "Amazing value for 4 legendary books in one set!" }
+    ]
+  },
+  {
+    id: "prod-306",
+    title: "How to Stop Worrying and Start Living by Dale Carnegie",
+    brand: "Dale Carnegie",
+    category: "Books",
+    price: 3.99,
+    originalPrice: 5.99,
+    rating: 4.6,
+    reviewsCount: 1200,
+    stock: 75,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 40,
+    image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=800&q=80",
+    description: "Actionable formulas to eliminate anxiety, stress, and worry from your personal and professional career.",
+    specs: [
+      "Format: Premium Paperback",
+      "Publisher: Pocket Books",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk6", author: "Kavita S.", rating: 5, date: "2026-06-05", comment: "Helped me manage workplace stress completely." }
+    ]
+  },
+  {
+    id: "prod-307",
+    title: "Rich Dad Poor Dad - 20th Anniversary Edition by Robert T. Kiyosaki",
+    brand: "Robert Kiyosaki",
+    category: "Books",
+    price: 4.99,
+    originalPrice: 7.99,
+    rating: 4.7,
+    reviewsCount: 18646,
+    stock: 110,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 95,
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+    description: "What the rich teach their kids about money that the poor and middle class do not! The #1 Personal Finance book of all time.",
+    specs: [
+      "Format: 20th Anniversary Edition Paperback",
+      "Publisher: Plata Publishing",
+      "Language: English / Multi-language"
+    ],
+    reviews: [
+      { id: "bk7", author: "James Wilson", rating: 5, date: "2026-07-22", comment: "Changed my financial mindset forever!" }
+    ]
+  },
+  {
+    id: "prod-308",
+    title: "Greatest Greek Philosophers (Deluxe Hardbound Edition): Plato, Aristotle, Epicurus",
+    brand: "Classics Library",
+    category: "Books",
+    price: 8.99,
+    originalPrice: 12.99,
+    rating: 4.8,
+    reviewsCount: 116,
+    stock: 30,
+    isFlashSale: false,
+    isTodayDeal: false,
+    isBestSeller: false,
+    claimedPercent: 25,
+    image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80",
+    description: "Gold-embossed deluxe hardbound edition containing the essential dialogues of Socrates, Plato, Aristotle, and the Republic.",
+    specs: [
+      "Format: Deluxe Hardbound Edition",
+      "Gold Foil Stamping & Ribbon Bookmark",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk8", author: "Prof. Arthur", rating: 5, date: "2026-05-14", comment: "Stunning hardcover binding for any bookshelf." }
+    ]
+  },
+  {
+    id: "prod-309",
+    title: "The Practicing Mind: Developing Focus And Discipline In Your Life by Thomas M. Sterner",
+    brand: "Thomas Sterner",
+    category: "Books",
+    price: 3.49,
+    originalPrice: 4.99,
+    rating: 4.6,
+    reviewsCount: 3100,
+    stock: 50,
+    isFlashSale: false,
+    isTodayDeal: true,
+    isBestSeller: false,
+    claimedPercent: 35,
+    image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80",
+    description: "Master any skill or challenge by learning to love the process of practice, focus, and discipline.",
+    specs: [
+      "Format: Paperback",
+      "Publisher: New World Library",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk9", author: "Lisa M.", rating: 5, date: "2026-06-30", comment: "A brilliant guide on mindfulness during daily tasks." }
+    ]
+  },
+  {
+    id: "prod-310",
+    title: "Rewire Your Anxious Brain: Stop Overthinking, Find Calm & Transform Anxiety by Nick Trenton",
+    brand: "Nick Trenton",
+    category: "Books",
+    price: 3.99,
+    originalPrice: 5.99,
+    rating: 4.5,
+    reviewsCount: 407,
+    stock: 65,
+    isFlashSale: true,
+    isTodayDeal: true,
+    isBestSeller: true,
+    claimedPercent: 70,
+    image: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=800&q=80",
+    description: "Neuroscience-backed techniques to end negative thought spirals, overcome overthinking, and relieve stress.",
+    specs: [
+      "Format: Paperback",
+      "Publisher: PKCS Publishing",
+      "Language: English"
+    ],
+    reviews: [
+      { id: "bk10", author: "Dr. Rachel", rating: 5, date: "2026-07-18", comment: "Practical exercises that really calm an overactive mind." }
+    ]
   }
 ];
+
 
 
 const INITIAL_COUPONS = [
